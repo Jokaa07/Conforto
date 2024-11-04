@@ -1,0 +1,327 @@
+<html><head><base href="/" /><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Casa & Conforto - Utensílios para seu Lar</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --primary: #2c3e50;
+    --secondary: #e74c3c;
+    --accent: #3498db;
+    --light: #ecf0f1;
+}
+
+body {
+    background-color: var(--light);
+}
+
+header {
+    background-color: var(--primary);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--secondary);
+}
+
+.hero {
+    margin-top: 80px;
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--secondary);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+.products {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.product-price {
+    font-size: 1.3rem;
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    background-color: var(--primary);
+    color: white;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="https://example.com" class="logo">Casa & Conforto</a>
+            <div class="nav-menu">
+                <a href="https://example.com/produtos" class="nav-link">Produtos</a>
+                <a href="https://example.com/categorias" class="nav-link">Categorias</a>
+                <a href="https://example.com/ofertas" class="nav-link">Ofertas</a>
+                <a href="https://example.com/contato" class="nav-link">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transforme Sua Casa</h1>
+            <p>Descubra nossa coleção exclusiva de utensílios domésticos</p>
+            <button class="cta-button">Explorar Produtos</button>
+        </div>
+    </section>
+
+    <section class="products">
+        <h2 class="section-title">Produtos em Destaque</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1585515320310-259814833e62" alt="Conjunto de Panelas Premium, estilo moderno em aço inox" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Conjunto de Panelas Premium</h3>
+                    <p class="product-price">R$ 599,90</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa" alt="Jogo de Talheres Elegance, 24 peças em aço inox escovado" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Jogo de Talheres Elegance</h3>
+                    <p class="product-price">R$ 299,90</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1576675466969-38eeae4b41f6" alt="Conjunto de Potes Herméticos, design moderno com tampa colorida" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Conjunto de Potes Herméticos</h3>
+                    <p class="product-price">R$ 149,90</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1590794056226-79ef3a8147e1" alt="Kit Organização Cozinha, conjunto completo em bamboo" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Kit Organização Cozinha</h3>
+                    <p class="product-price">R$ 229,90</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Nós</h3>
+                <p>Sua loja online de utensílios domésticos de qualidade.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="https://example.com/sobre">Sobre Nós</a></li>
+                    <li><a href="https://example.com/politica-privacidade">Política de Privacidade</a></li>
+                    <li><a href="https://example.com/termos">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul>
+                    <li>Email: contato@casaeconforto.com</li>
+                    <li>Telefone: (11) 1234-5678</li>
+                    <li>Endereço: Rua Example, 123</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<script>
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+        const product = button.closest('.product-card');
+        const productName = product.querySelector('.product-title').textContent;
+        
+        // Animação do botão
+        button.style.backgroundColor = '#27ae60';
+        button.textContent = 'Adicionado!';
+        
+        setTimeout(() => {
+            button.style.backgroundColor = '';
+            button.textContent = 'Adicionar ao Carrinho';
+        }, 2000);
+        
+        // Aqui você pode adicionar a lógica do carrinho
+        console.log(`Produto adicionado: ${productName}`);
+    });
+});
+
+document.querySelector('.cta-button').addEventListener('click', () => {
+    const productsSection = document.querySelector('.products');
+    productsSection.scrollIntoView({ behavior: 'smooth' });
+});
+</script>
+</body></html>
